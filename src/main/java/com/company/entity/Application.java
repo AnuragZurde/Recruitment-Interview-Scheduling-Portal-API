@@ -33,7 +33,11 @@ public class Application {
     @Column(nullable = false)
     private ApplicationStatus status;
 
+    @Column(nullable = false)
+    private String resumeUrl;
+
     @CreationTimestamp
+    @Column(updatable = false)
     private LocalDateTime appliedAt;
 
     @UpdateTimestamp

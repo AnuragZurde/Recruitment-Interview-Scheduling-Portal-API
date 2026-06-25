@@ -31,7 +31,7 @@ public class AuthService {
 
         if (user != null ) throw new IllegalArgumentException("User Already Present.");
 
-        user = userRepository.save(new User().builder()
+        user = userRepository.save(User.builder()
                 .fullName(request.getFullName())
                 .password(passwordEncoder.encode(request.getPassword()))
                         .email(request.getEmail())

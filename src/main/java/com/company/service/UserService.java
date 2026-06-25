@@ -37,7 +37,7 @@ public class UserService {
         user.setMobileNumber(request.getMobileNumber());
 
         User updateUser = userRepository.save(user);
-        return userMapper.toDto(user);
+        return userMapper.toDto(updateUser);
     }
 
     @Transactional
