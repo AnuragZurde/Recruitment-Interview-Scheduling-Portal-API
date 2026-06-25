@@ -18,7 +18,7 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/admin/job")
-public class JobController {
+public class HrController {
 
     private final JobService jobService;
 

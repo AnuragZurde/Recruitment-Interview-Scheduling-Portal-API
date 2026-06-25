@@ -12,10 +12,11 @@ import com.company.reppository.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.AccessDeniedException;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class JobService {
+public class HrService {
 
     private final JobPostingRepository jobPostingRepository;
     private final SkillRepository skillRepository;
@@ -78,9 +79,10 @@ public class JobService {
                 .orElseThrow(()-> new IllegalArgumentException("Job Not Found."));
 
         if (!jobPosting.getAdmin().getEmail().equals(hrEmail)){
-            throw new AccessDeniedException("You Do Not Have Permission To Delete This Job Details.");
+            throw new AccessDeniedException("You Do not have permission to edit this job details.");
         }
-        jobPostingRepository.delete(jobPosting);
+        jobPosting.setIsActive(false);
+        jobPostingRepository.save(jobPosting);
 
         return "Job Details Successfully";
     }
@@ -109,7 +111,6 @@ public class JobService {
         jobPosting.setRequiredSkills(updateSkills);
 
         jobPostingRepository.save(jobPosting);
-
         return "Job Updated Successfully";
     }
 
@@ -119,15 +120,15 @@ public class JobService {
                 .orElseThrow(()-> new IllegalArgumentException("Job Not Found."));
 
         if (!jobPosting.getAdmin().getEmail().equals(hrEmail)){
-            throw new AccessDeniedException("You Do Not Have Permission To Edit this Job.");
+            throw new AccessDeniedException("You Do not have permission to edit this job details.");
         }
 
         updates.forEach((key, data)->{
             switch (key){
                 case "title" -> jobPosting.setTitle((String) data);
                 case "description" -> jobPosting.setDescription((String) data);
-                case "minSalary" -> jobPosting.setMinSalary((Double) data);
-                case "maxSalary" -> jobPosting.setMaxSalary((Double) data);
+                case "minSalary" -> jobPosting.setMinSalary(Double.valueOf(data.toString()));
+                case "maxSalary" -> jobPosting.setMaxSalary(Double.valueOf(data.toString()));
                 case "isActive" -> jobPosting.setIsActive((Boolean) data);
 
                 case "skills" -> {
