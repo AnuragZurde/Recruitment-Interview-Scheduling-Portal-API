@@ -7,9 +7,9 @@ import com.company.entity.JobPosting;
 import com.company.entity.User;
 import com.company.enums.ApplicationStatus;
 import com.company.mapper.ApplicationMapper;
-import com.company.reppository.ApplicationRepository;
-import com.company.reppository.JobPostingRepository;
-import com.company.reppository.UserRepository;
+import com.company.repository.ApplicationRepository;
+import com.company.repository.JobPostingRepository;
+import com.company.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service

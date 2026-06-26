@@ -1,7 +1,7 @@
 package com.company.security;
 
 import com.company.entity.User;
-import com.company.reppository.UserRepository;
+import com.company.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

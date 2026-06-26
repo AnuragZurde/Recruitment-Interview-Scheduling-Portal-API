@@ -4,7 +4,7 @@ import com.company.dto.userProfileDto.UserProfileResponseDto;
 import com.company.dto.userProfileDto.UserUpdateRequestDto;
 import com.company.entity.User;
 import com.company.mapper.UserMapper;
-import com.company.reppository.UserRepository;
+import com.company.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

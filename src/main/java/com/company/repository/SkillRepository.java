@@ -1,4 +1,4 @@
-package com.company.reppository;
+package com.company.repository;
 
 import com.company.entity.Skill;
 import org.springframework.data.jpa.repository.JpaRepository;

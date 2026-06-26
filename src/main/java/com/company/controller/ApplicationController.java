@@ -2,7 +2,6 @@ package com.company.controller;
 
 import com.company.dto.applicationDto.ApplicationRequestDto;
 import com.company.dto.applicationDto.ApplicationResponseDto;
-import com.company.reppository.ApplicationRepository;
 import com.company.service.ApplicationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
