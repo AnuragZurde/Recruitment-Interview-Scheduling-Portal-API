@@ -1,0 +1,636 @@
+{
+  "info": {
+    "_postman_id": "ff48d59b-c89b-4688-89da-e5bb4c20b4c9",
+    "name": "Recruitment & Interview Scheduling API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39218150"
+  },
+  "item": [
+    {
+      "name": "Job Recuritment",
+      "item": [
+        {
+          "name": "User Request",
+          "item": [
+            {
+              "name": "Get My Profile",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcml5YS5zaGFybWFAZ21haWwuY29tIiwidXNlcklkIjo0LCJpYXQiOjE3ODI0NTkzNDUsImV4cCI6MTc4MjQ2MTE0NX0.JEm9c6pP_XON8g1Oc2QaSWOvgUdi0GNYvpvQky7slTU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/api/user/profile",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "user",
+                    "profile"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update User Profile",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcml5YS5zaGFybWFAZ21haWwuY29tIiwidXNlcklkIjo0LCJpYXQiOjE3ODI0NTkzNDUsImV4cCI6MTc4MjQ2MTE0NX0.JEm9c6pP_XON8g1Oc2QaSWOvgUdi0GNYvpvQky7slTU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"fullName\":\"Priya Rai Sharma\",\n    \"mobileNumber\":1234567891\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/api/user/profile",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "user",
+                    "profile"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Patch User Profile",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcml5YS5zaGFybWFAZ21haWwuY29tIiwidXNlcklkIjo0LCJpYXQiOjE3ODI0NTkzNDUsImV4cCI6MTc4MjQ2MTE0NX0.JEm9c6pP_XON8g1Oc2QaSWOvgUdi0GNYvpvQky7slTU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"fullName\":\"Priya Patel\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/api/user/profile",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "user",
+                    "profile"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete User Profile",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcml5YS5zaGFybWFAZ21haWwuY29tIiwidXNlcklkIjo0LCJpYXQiOjE3ODI0NTkzNDUsImV4cCI6MTc4MjQ2MTE0NX0.JEm9c6pP_XON8g1Oc2QaSWOvgUdi0GNYvpvQky7slTU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/api/user/profile",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "user",
+                    "profile"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "HR Request",
+          "item": [
+            {
+              "name": "Creating Job",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDUwNDk1LCJleHAiOjE3ODI0NTIyOTV9.uXuwgn5_CpCuF-ZnTMHmWghXKENtLIN6dhusINVwcA4",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"Cybersecurity Analyst\",\n    \"description\": \"Seeking a cybersecurity analyst to monitor systems, identify vulnerabilities, and strengthen security.\",\n    \"minSalary\": 90000,\n    \"maxSalary\": 135000,\n    \"skills\": [\"Network Security\", \"SIEM\", \"Penetration Testing\", \"Linux\"]\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/hr/job",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get All Job's",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDUwNDk1LCJleHAiOjE3ODI0NTIyOTV9.uXuwgn5_CpCuF-ZnTMHmWghXKENtLIN6dhusINVwcA4",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/hr/job/all",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "who applied for the Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDQ1MTk5LCJleHAiOjE3ODI0NDY5OTl9.8h9shE3sLmTMX_TzNggJbWgXUFuBiDNrZavFZGzy8zE",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/hr/job/1/applications",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "1",
+                    "applications"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Schedule Interview",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDQ1MTk5LCJleHAiOjE3ODI0NDY5OTl9.8h9shE3sLmTMX_TzNggJbWgXUFuBiDNrZavFZGzy8zE",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"interviewerEmail\": \"rohit@gmail.com\",\n    \"scheduleTime\": \"2026-06-30T10:30:00\",\n    \"meetingLink\": \"https://zoom.us/j/123456789\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/hr/job/application/1",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "application",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete Job Details",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDUwODc3LCJleHAiOjE3ODI0NTI2Nzd9.JFfFMNXQ1FfOumSdLcEN37NuUzZle_GH04J441X5Was",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/hr/job/16",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "16"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update Whole Job Details",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDUwODc3LCJleHAiOjE3ODI0NTI2Nzd9.JFfFMNXQ1FfOumSdLcEN37NuUzZle_GH04J441X5Was",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Mac Book Operator\",\n  \"description\": \"Looking for a Mac Book Operator to manage data entry, documentation, and daily office tasks using macOS systems.\",\n  \"minSalary\": 30000,\n  \"maxSalary\": 50000,\n  \"skills\": [\"macOS\", \"MS Office\", \"Data Entry\", \"Typing\", \"Google Workspace\"]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/hr/job/1",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Patch Job Details",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWd6dXJkZTg1QGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzgyNDUwODc3LCJleHAiOjE3ODI0NTI2Nzd9.JFfFMNXQ1FfOumSdLcEN37NuUzZle_GH04J441X5Was",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\":\"IOS Operator\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/hr/job/1",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "hr",
+                    "job",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Candidate Request",
+          "item": [
+            {
+              "name": "Apply For Job",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsImlhdCI6MTc4MjQxMjU5MywiZXhwIjoxNzgyNDE0MzkzfQ.jJq3_XWjxYHMaANPhfIV3KbGFXdZwebjwRW01JuF-Xo",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"resumeUrl\": \"https://linkedin.com/in/my-awesome-resume\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/api/applications/job/1",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "applications",
+                    "job",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get My Application",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWhhLnBhdGVsQGdtYWlsLmNvbSIsInVzZXJJZCI6NiwiaWF0IjoxNzgyNDYwNDAyLCJleHAiOjE3ODI0NjIyMDJ9.Xvp-SE9CBW9AR63peDo5YcgeceCejluc9VHWoV8mKiA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/api/applications/my-application",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "applications",
+                    "my-application"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "User Login/Signup Request",
+          "item": [
+            {
+              "name": "User Login",
+              "request": {
+                "auth": {
+                  "type": "basic",
+                  "basic": [
+                    {
+                      "key": "password",
+                      "value": "Anu1710",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "anuragzurde85@gmail.com",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\":\"rohit@gmail.com\",\n    \"password\":\"rohit123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/auth/login",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "User Signup",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\":\"anuragzurde85@gmail.com\",\n    \"password\":\"Anu1710\",\n    \"fullName\":\"Anurag Kisan Zurde\",\n    \"mobileNumber\":913758870,\n    \"userRole\":\"HR_ADMIN\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/auth/signup",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Interviewer Request",
+          "item": [
+            {
+              "name": "Feedback",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2hpdEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4MjQ0ODY4NiwiZXhwIjoxNzgyNDUwNDg2fQ.pzRBhgNtwc-RA0ssK3viBJTErN31HjSH3VOk-n1XAVI",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"feedBack\": \"Rahul answered all the Spring Boot questions perfectly. Excellent communication skills.\",\n    \"passed\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8080/api/interviews/1/feedback",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "interviews",
+                    "1",
+                    "feedback"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get All My Interviews",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2hpdEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4MjQ2MDEzNSwiZXhwIjoxNzgyNDYxOTM1fQ.s8YifUjXzTfuqwE_k_39_8WqUSK8rhWzsObhmuU3d4w",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/api/interviewers/my-interviews",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "interviewers",
+                    "my-interviews"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
