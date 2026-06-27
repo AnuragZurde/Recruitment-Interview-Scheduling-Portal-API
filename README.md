@@ -1,6 +1,6 @@
 # Recruitment & Interview Scheduling API
 
-An enterprise-grade, role-based Applicant Tracking System (ATS) and Interview Scheduling REST API built with Spring Boot 3. This platform handles the complete recruitment lifecycle—from HR posting jobs and candidates applying, to scheduling interviews and gathering feedback.
+An enterprise-grade, role-based Applicant Tracking System (ATS) and Interview Scheduling REST API built with Spring Boot. This platform handles the complete recruitment lifecycle—from HR posting jobs and candidates applying, to scheduling interviews and gathering feedback.
 
 # Tech Stack
 * Language: Java 26
